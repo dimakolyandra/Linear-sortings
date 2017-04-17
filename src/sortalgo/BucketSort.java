@@ -3,14 +3,18 @@ package sortalgo;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+/** Class that implements bucket sort
+ * @author dimakolyandra */
 public class BucketSort {
 	
+	/** Input array of number */
 	public float []  inputArray;
 	
 	public BucketSort(float [] arr){
 		inputArray = arr;
 	}
 	
+	/** Class comparator */
 	public class Comp implements Comparator{
 		@Override
 		public int compare(Object arg0, Object arg1) {
@@ -25,6 +29,8 @@ public class BucketSort {
 			return 0;
 		}
 	}
+	
+	/** Print result */
 	public void print(ArrayList<ArrayList<Float>> b){
 		for(int i = 0; i < b.size();i++){
 			ArrayList<Float> tmp = b.get(i);
@@ -34,6 +40,8 @@ public class BucketSort {
 		}
 		System.out.println();
 	}
+	
+	/** Bucket sort alhorithm */
 	public void bucketSort(){
 		ArrayList<ArrayList<Float>> b = new ArrayList<ArrayList<Float>>();
 		for(int i = 0; i < inputArray.length;i++){
